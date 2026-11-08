@@ -1,0 +1,297 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{siunitx}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{{\huge\textbf{\textcolor{aquablue!50!white}{\thepage /}}}{\Large \textbf{\textcolor{cyan!70!white}{\pageref{LastPage}}}}}
+\renewcommand{\headrulewidth}{0pt}
+
+\definecolor{purewhite}{RGB}{255, 255, 255}
+\definecolor{offwhite}{RGB}{220, 225, 230}
+\definecolor{electricblue}{RGB}{0, 191, 255}
+\definecolor{deepblue}{RGB}{0, 102, 204}
+\definecolor{navyblue}{RGB}{0, 51, 102}
+\definecolor{darkcharcoal}{RGB}{15, 15, 20}
+\definecolor{ivory}{RGB}{250, 249, 246}
+\definecolor{royalblue}{RGB}{65, 105, 225}     
+\definecolor{aquablue}{RGB}{0, 255, 255}       
+\definecolor{oceanblue}{RGB}{0, 119, 182}     
+\definecolor{aquamarine}{RGB}{127, 255, 212}   
+\definecolor{babyblue}{RGB}{137, 207, 240}     
+\definecolor{turquoise}{RGB}{64, 224, 208}     
+\definecolor{darkturquoise}{RGB}{0, 206, 209}
+
+\color{ivory}
+\pagecolor{black}
+
+
+\begin{document}
+\begin{titlepage}
+   \begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+     \draw[blue,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+     \draw[aquablue, line width=2pt]([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+     ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+     \draw [aquablue,line width=2pt]([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+     ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+   \end{tikzpicture}
+\begin{center}
+  \centerline{{\Huge \bfseries \textcolor{aquablue!60!blue}{International Physics Competition}}}
+  \vspace{1cm}
+  {\Large \bfseries \color{electricblue} Qualification Round 2026}\\[1cm]
+  
+  {\large \bfseries \color{cyan!30!white} Solution Document}\\[2cm]
+  
+  {\color{aquablue} \Huge $\diamond$}\\[2cm]
+  
+  {\huge \bfseries \color{aquablue} Md Mokhdum Amin Fahim}\\[1cm]
+  {\Large \bfseries\color{aquamarine} Notre Dame College, Dhaka}\\[1cm]
+  {\Large \color{aquamarine!50!aquablue}\bfseries Bangladesh}\\[2cm]
+  {\color{aquablue} \Huge $\diamond$}\\[2cm]
+  {\large \bfseries \color{cyan!70!white} Date of Submission : 1 November, 2026}\\[1cm]
+  
+  {\large \bfseries \color{babyblue} Number of Pages : \pageref{LastPage} }\\[1cm]
+ 
+  
+  \vspace{\fill}
+\end{center}
+\end{titlepage}
+
+\newpage
+\setcounter{page}{1}
+\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+     \draw[blue,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+     \draw [aquablue,line width=2pt]([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+     ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+     \draw [aquablue,line width=2pt]([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+     ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+\end{tikzpicture}
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{Problem A : Size of Moon’s Shadow}}
+\end{center}
+
+Given,
+
+\begin{itemize}
+    \item Full eclipse began at $t_1=20:31:31$
+    \item Full eclipse ended at $t_2= 20:32:32$
+    \item  Moon’s shadow's speed $v=\qty{0.75}{km/s}$
+\end{itemize}
+$\therefore $ The time interval $\Delta t =t_2-t_1=00:01:01=\qty{61}{s}$\\
+$\therefore$ The distance the Moon's shadow traveled,\\ $s=v\Delta t = \qty{0.75}{km/s}\cdot\qty{61}{s}=\qty{45.75}{km}$\\
+
+
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=black,
+    colframe=aquamarine!50!aquablue,
+    coltitle=blue!70!black,
+    colbacktitle=aquablue,
+    title=Answer,
+    fonttitle=\bfseries,
+    boxed title style={size=small,colframe=blue},
+    coltext=ivory!85!aquablue
+]
+   \centerline{The width of the Moon’s shadow is \qty{45.75}{km}}
+\end{tcolorbox}
+\vspace{1cm}
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{Problem B : Floating Box}}
+\end{center}
+Given,
+\begin{itemize}
+    \item Density of box $\rho_{box} = \qty{650}{kg/m^3}$ 
+    \item Density of water $\rho_{water} = \qty{1000}{kg/m^3}$
+    \item The box has outer length $a=\qty{25}{cm}$ , width $b=\qty{12}{cm}$ and hight $c=\qty{18}{cm}$
+    \item The thickness of wall is $d=\qty{1.0}{cm}$
+\end{itemize}
+Two forces are acting on the box - wight and buoyancy. The net force is $\sum F =0$\\
+$\therefore$ The volume of the box,\\ $V=abc-(a-2d)(b-2d)(c-2d)=\qty{5400}{cm^3}-\qty{3680}{cm^3}=\qty{1720}{cm^3}$\\
+$\therefore$ The weight $W=mg=\rho_{box} V g$\\
+We think that hight $h$ of the box is beneath the water.\\
+$\therefore$ Volume of box under water $V_w=abh$\\
+According to Archimedes law,\\
+$\therefore$ The buoyant force $F_b=\rho_{water}V_wg=\rho_{water}abhg$\\
+$\therefore\sum F= W-F_b=0 \implies F_b=W \implies \rho_{water}abhg=\rho_{box} V g$\\
+$$\therefore h = \frac{\rho_{box} V }{\rho_{water}ab}=\frac{\qty{650}{kg/m^3}\cdot \qty{1720}{cm^3} }{\qty{1000}{kg/m^3}\cdot \qty{25}{cm} \cdot \qty{12}{cm}}\approx\qty{3.73}{cm}$$
+$\therefore$ The top of the box above the water surface is $h_t=c-h\approx\qty{14.3}{cm}$
+
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=black,
+    colframe=aquamarine!50!aquablue,
+    coltitle=blue!70!black,
+    colbacktitle=aquablue,
+    title=Answer,
+    fonttitle=\bfseries,
+    boxed title style={size=small,colframe=blue},
+    coltext=ivory!85!aquablue
+]
+  \centerline{The top of the box is about $\qty{14.3}{cm}$ high above the water surface.}
+\end{tcolorbox}
+\newpage
+\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+     \draw[blue,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+     \draw [aquablue,line width=2pt]([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+     ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+     \draw [aquablue,line width=2pt]([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+     ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+\end{tikzpicture}
+
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{Problem C : Echo Measure}}
+\end{center}
+
+Given,
+\begin{itemize}
+    \item The air temperature is $\qty{20}{\degree C}$
+    \item The student hears an echo $t=\qty{1.24}{s}$
+    \item For sound in air, use the approximate relation,
+    $$v= \left( 331+0.60\unit{\frac{T}{\degree C}} \right) \unit{\frac{m}{s}}$$
+\end{itemize}
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{(a)}}
+\end{center}
+$\therefore$ The speed of sound,
+$$v= \left( 331+0.60\unit{\frac{\qty{20}{\degree C}}{\degree C}} \right) \unit{\frac{m}{s}}=\qty{343}{m/s}$$\\
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{(b)}}
+\end{center}
+We suppose that the cliff is distance $d$ away.\\
+$\therefore$ The distance,
+$$d=\frac{1}{2}vt=\frac{1}{2}\cdot\qty{343}{m/s}\cdot \qty{1.24}{s}\approx \qty{213}{m}$$\\
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{(c)}}
+\end{center}
+Given, the new temperature $T=\qty{32}{\degree C}$\\
+$\therefore$ The new speed of sound,
+$$v_w= \left( 331+0.60\unit{\frac{\qty{32}{\degree C}}{\degree C}} \right) \unit{\frac{m}{s}}=\qty{350.2}{m/s}$$
+$\therefore$ The echo retures in time,\\
+$$t_w=\frac{2d}{v_w}=\frac{2\cdot \qty{213}{m}}{\qty{350.2}{m/s}}\approx \qty{1.22}{s}$$
+$\therefore$ The echo returns earlier,
+$$\Delta t =t_w-t=\qty{1.24}{s}-\qty{1.22}{s}=\qty{0.02}{s}$$\\
+
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=black,
+    colframe=aquamarine!50!aquablue,
+    coltitle=blue!70!black,
+    colbacktitle=aquablue,
+    title=Answer,
+    fonttitle=\bfseries,
+    boxed title style={size=small,colframe=blue},
+    coltext=ivory!85!aquablue
+]
+  \centerline{(a) \qty{343}{m/s} ; (b) \qty{213}{m} ; (c) \qty{0.02}{s}}
+\end{tcolorbox}
+\newpage
+\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+     \draw[blue,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+     \draw [aquablue,line width=2pt]([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+     ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+     \draw [aquablue,line width=2pt]([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+     ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+\end{tikzpicture}
+
+
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{Problem D : Garden Pipe Split}}
+\end{center}
+\vspace{5pt}
+Given,
+ \begin{itemize}
+    \item Splitter gauge pressure $\Delta p = 180\text{ kPa}$ 
+    \item Both branches have length $L$ and cross-sectional area $A$.
+    \item $\Delta p = kLv^2$
+    \item $k_2(\lambda) = k_1(1 + 3\lambda^2)$\\
+\end{itemize}
+
+Substituting $v = Q/A$,
+$$ \Delta p = \left(\frac{k L}{A^2}\right) Q^2 $$ \\
+
+As $\Delta p_1=\Delta p_2$,
+$$\left(\frac{k_1(1 + 3\lambda^2) L}{A^2}\right) Q_2^2=\left(\frac{k_1 L}{A^2}\right) Q_1^2$$
+$$ Q_2 = \frac{Q_1}{\sqrt{1 + 3\lambda^2}}$$\\
+
+By using conservation of mass at the splitter, the total flow rate $Q_{\text{tot}}$ is,
+$$Q_{\text{tot}}(\lambda) = Q_1 + Q_2= Q_1 + \frac{Q_1}{\sqrt{1 + 3\lambda^2}}= Q_1 \left( 1 + \frac{1}{\sqrt{1 + 3\lambda^2}} \right)$$
+$$Q_{\text{tot}}(\lambda) =Q_1 \left( 1 + \frac{1}{\sqrt{1 + 3\lambda^2}} \right) $$\\
+Which is the required expression for the total flow rate through the splitter.
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=black,
+    colframe=aquamarine!50!aquablue,
+    coltitle=blue!70!black,
+    colbacktitle=aquablue,
+    title=Answer,
+    fonttitle=\bfseries,
+    boxed title style={size=small,colframe=blue},
+    coltext=ivory!85!aquablue
+]
+  \centerline{It is shown that : $ Q_{\text{tot}}(\lambda) =Q_1 \left( 1 + \frac{1}{\sqrt{1 + 3\lambda^2}} \right)$}
+\end{tcolorbox}
+\newpage
+
+
+\begin{center}
+    {\large \bfseries \color{aquablue!80!blue} \underline{Problem E : Lightning Rod}}
+\end{center}
+During thunderstorm, charge separation creates a voltage \(V\) between the cloud and the ground, forming an electric field,
+$$E = -\nabla V$$ 
+The charge density \( \sigma \) accumulates densely on sharp points ,as like rod's tip, because :
+$$\sigma \propto 1/R$$
+Here,\\
+\(R\) is the radius of curvature of the rod's tip . This high charge concentration increases the local electric field, as :
+$$E = \sigma/\varepsilon_0$$
+ The ionized air triggers a controlled electrical discharge path before the rest of the structure can. At the end, according to Ohm’s law,
+ $$I = V/R$$
+ The lightning current flows safely through the thick conductor directly into the Earth. Thus, our buildings remain safe due to these rods.
+
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    colback=black,
+    colframe=aquamarine!50!aquablue,
+    coltitle=blue!70!black,
+    colbacktitle=aquablue,
+    title=Answer,
+    fonttitle=\bfseries,
+    boxed title style={size=small,colframe=blue},
+    coltext=ivory!85!aquablue
+]
+  The rod concentrates charge at its tip to increase the local electric field which causes the lightning to strike the rod and ground through wire.
+\end{tcolorbox}
+
+
+\end{document}
